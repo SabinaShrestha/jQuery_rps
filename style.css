@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.img_size {
+  height: 200px;
+  width: 200px;
+  /* display: inline; */
+}
+
+.sameline {
+  position: relative;
+
+}
