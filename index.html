@@ -2,13 +2,15 @@
 
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
   </head>
 
   <body>
 
     <div class="center">
-      <h1>Rock Paper Scissors</h1>
-      <button id="refresh">REFRESH</button>
+      <h3>Rock Paper Scissors</h3>
+      <button id="refresh" class="waves-effect waves-light btn">REFRESH</button>
 
       <div class="div-size">
         <div class="space">
@@ -17,24 +19,26 @@
           <img src="images/scissors.png" alt="rock" class="img_size space"></img>
         </div>
         <div class="space">
-          <button class="user" id="rock">ROCK</button>
-          <button class="user" id="paper">PAPER</button>
-          <button class="user" id="scissors">SCISSORS</button>
+          <button class="user waves-effect waves-light btn" id="rock">ROCK</button>
+          <button class="user waves-effect waves-light btn" id="paper">PAPER</button>
+          <button class="user waves-effect waves-light btn" id="scissors">SCISSORS</button>
         </div>
       </div>
 
 
-      <h2 id="user_choice">Chose your hand</h2>
-      <button id="play">PLAY</button>
-      <h2 id="computer_choice">Computer hand</h2>
-      <h2 id="winner">Wins</h2>
+      <h6 id="user_choice">Chose your hand</h6>
+      <button id="play" class="waves-effect waves-light btn">PLAY</button>
+      <h6 id="computer_choice">Computer hand</h6>
+      <h6 id="winner">Wins</h6>
     </div>
 
-
-    <div class='center'>
-      <h3 id="win_percentage">Win: 0%</h3>
-      <h3 id="lose_percentage">Lose: 0%</h3>
-      <h3 id="tie_percentage">Tie: 0%</h3>
+    <div class="sides">
+      <div id="display_win"></div>
+      <div>
+        <h5 id="win_percentage">Win: 0%</h5>
+        <h5 id="lose_percentage">Lose: 0%</h5>
+        <h5 id="tie_percentage">Tie: 0%</h5>
+      </div>
     </div>
 
 

@@ -12,6 +12,16 @@ body {
   width: 200px;
 }
 
+.img1 {
+  height: 150px;
+  width: 200px;
+}
+
+.img2 {
+  height: 150px;
+  width: 600px;
+}
+
 
 .div-size {
   width: 850px;
@@ -20,7 +30,22 @@ body {
 }
 
 .space {
+  margin: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.user {
+  padding: 10px;
+}
+
+.btn {
+  background-color: cornflowerblue;
+}
+
+.sides {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
 }

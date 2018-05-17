@@ -42,6 +42,7 @@
     var lose = 0
     var tie = 0
     var total = 0
+    var result
 
   $('.user').on('click', function(){
     user_hand = $(this).text()
@@ -72,6 +73,22 @@
 
   }
 
+  function img_display(){
+    debugger
+    switch (result){
+      case "WIN":
+        $('#display_win').html('<img class="img2" alt="win" src="images/win.gif"></img>')
+        break
+      case "LOSE":
+        $('#display_win').html('<img class="img1" alt="lose" src="images/lose.gif"></img>')
+        break
+      case "TIE":
+        $('#display_win').html('<img class="img1" alt="tie" src="images/tie1.gif"></img>')
+        break
+      default:
+    }
+  }
+
 
   $('#play').on('click', game)
 
@@ -83,22 +100,29 @@
       if (user_hand === rand){
         $('#winner').text("It's a Tie ")
         tie++
+        result = "TIE"
       }else if((rand == 'ROCK')&&(user_hand == 'PAPER')||
           (rand == 'SCISSORS')&&(user_hand == 'ROCK')||
           (rand == 'PAPER')&&(user_hand == 'SCISSORS')){
           $('#winner').text('You Win.')
           wins++
+          result = "WIN"
+          // debugger
         }else if((rand == 'PAPER')&&(user_hand == 'ROCK')||
           (rand == 'SCISSORS')&&(user_hand == 'PAPER')||
           (rand == 'ROCK')&&(user_hand == 'SCISSORS')){
           $('#winner').text('You Lose.')
           lose++
+          result = "LOSE"
       }else{
           $('#winner').text('Oh Oh! Something went wrong.')
+          result = "0"
       }
       percentage()
+      img_display(result)
+      }
 
-  }
+
 
 
 
@@ -114,6 +138,8 @@
     $('#computer_choice').text('Computer hand')
     $('#winner').text('Wins')
     percentage()
+    $('#display_win').html("")
+
   })
 
 
